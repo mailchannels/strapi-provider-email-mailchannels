@@ -1,0 +1,36 @@
+{
+  "name": "strapi-provider-email-mailchannels",
+  "version": "0.1.0",
+  "description": "MailChannels Email API provider for the Strapi email plugin",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "strapi",
+    "strapi-provider",
+    "email",
+    "mailchannels"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@strapi/strapi": "^5.0.0"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mailchannels/strapi-provider-email-mailchannels.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mailchannels/strapi-provider-email-mailchannels/issues"
+  },
+  "homepage": "https://github.com/mailchannels/strapi-provider-email-mailchannels#readme",
+  "author": "MailChannels <dev@mailchannels.com>"
+}
