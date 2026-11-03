@@ -46,9 +46,13 @@ Keep the API key in your deployment's secret store. The sender domain must be au
   - `uncertain: true` (5xx, timeout or network failure): the email may have been accepted. The provider **never retries**, so a caller that retries could send a duplicate.
   - Error messages never include the API key or the provider's response body.
 
-## Reporting issues
+## Support
 
-Report bugs in this repository's [issue tracker](https://github.com/mailchannels/strapi-provider-email-mailchannels/issues). For account questions, contact MailChannels support at <https://support.mailchannels.com/>. Never include your API key.
+This project is supported by the MailChannels team on a best-effort basis. The best way to get support is to file an issue on GitHub: https://github.com/mailchannels/strapi-provider-email-mailchannels/issues
+
+If you are a MailChannels customer and have a problem with the operation of the MailChannels service, you can get support at https://support.mailchannels.com/
+
+Never include your API key in an issue.
 
 ## License
 
