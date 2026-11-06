@@ -1,7 +1,7 @@
 {
-  "name": "strapi-provider-email-mailchannels",
+  "name": "@mailchannels/strapi-provider-email-mailchannels",
   "version": "0.1.0",
-  "description": "MailChannels Email API provider for the Strapi email plugin",
+  "description": "Send Strapi email reliably through MailChannels: delivery tracking, bounce handling and domain authentication built in. Free to start.",
   "main": "index.js",
   "files": [
     "index.js",
