@@ -1,11 +1,15 @@
-# strapi-provider-email-mailchannels
+# @mailchannels/strapi-provider-email-mailchannels
 
-A [Strapi](https://strapi.io) email provider that sends through the MailChannels Email API (`POST https://api.mailchannels.net/tx/v1/send`). It has no dependencies and works on Node 20 or later with the global `fetch`.
+Send Strapi email reliably through MailChannels: delivery tracking, bounce handling and domain authentication built in. Free to start.
+
+MailChannels sends your Strapi app's email, such as password resets, account confirmations and notifications, through the MailChannels Email API instead of sendmail or your own SMTP server, so it reaches the inbox. Connect with an API key, verify your domain, and every message is tracked: you can see deliveries, bounces and complaints, and bounced addresses are suppressed automatically. MailChannels has delivered email for web hosting providers for twenty years. Start free with 100 emails a day, then pay one simple price per send.
+
+This package is a [Strapi](https://strapi.io) email provider that sends through the MailChannels Email API (`POST https://api.mailchannels.net/tx/v1/send`). It has no dependencies and works on Node 20 or later with the global `fetch`.
 
 ## Install
 
 ```sh
-npm install strapi-provider-email-mailchannels
+npm install @mailchannels/strapi-provider-email-mailchannels
 ```
 
 ## Configure
@@ -16,7 +20,7 @@ npm install strapi-provider-email-mailchannels
 module.exports = ({ env }) => ({
   email: {
     config: {
-      provider: 'strapi-provider-email-mailchannels',
+      provider: '@mailchannels/strapi-provider-email-mailchannels',
       providerOptions: { apiKey: env('MAILCHANNELS_API_KEY') },
       settings: {
         defaultFrom: 'Acme <no-reply@acme.example>',
