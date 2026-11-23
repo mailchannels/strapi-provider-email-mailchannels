@@ -23,6 +23,7 @@ test('maps a Strapi email to the Email API with defaults from settings', async (
   const { url, init, body } = calls[0];
   assert.equal(url, 'https://api.mailchannels.net/tx/v1/send');
   assert.equal(init.headers['X-Api-Key'], KEY);
+  assert.equal(init.headers['User-Agent'], 'mailchannels-strapi/0.1.1');
   assert.equal(init.redirect, 'manual');
   assert.deepEqual(body.from, { email: 'no-reply@acme.example', name: 'Acme' });
   assert.deepEqual(body.reply_to, { email: 'support@acme.example' });
