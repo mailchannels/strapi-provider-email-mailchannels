@@ -1,6 +1,8 @@
 'use strict';
 
 const ENDPOINT = 'https://api.mailchannels.net/tx/v1/send';
+// Identifies this provider's Email API traffic in usage reporting.
+const USER_AGENT = `mailchannels-strapi/${require('./package.json').version}`;
 const EMAIL = /^[^\s<>@,;"\x00-\x1f\x7f]+@[^\s<>@,;"\x00-\x1f\x7f]+\.[^\s<>@,;"\x00-\x1f\x7f]+$/;
 const MAX_ATTACHMENT_BYTES = 10 * 1024 * 1024;
 
@@ -71,7 +73,7 @@ module.exports = {
         let response;
         try {
           response = await fetch(ENDPOINT, { method: 'POST', redirect: 'manual', signal: AbortSignal.timeout(timeoutMs),
-            headers: { 'X-Api-Key': apiKey, 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+            headers: { 'X-Api-Key': apiKey, 'Content-Type': 'application/json', 'User-Agent': USER_AGENT }, body: JSON.stringify(body) });
         } catch {
           throw new MailChannelsEmailError('MailChannels request failed before a response; the email may have been accepted. Not retried.', { uncertain: true });
         }
